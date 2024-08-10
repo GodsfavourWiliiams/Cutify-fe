@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Hero from '@/components/Hero.vue'
+import Categories from '@/components/Categories.vue'
 </script>
 
 <template>
-  <div class="">Section 2</div>
+  <Categories />
 </template>

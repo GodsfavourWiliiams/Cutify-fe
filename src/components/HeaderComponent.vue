@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
-import AppContainer from './AppContainer.vue';
+import AppContainer from './AppContainer.vue'
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -37,13 +37,23 @@ const toggleMobileMenu = () => {
           <button
             @click="toggleMobileMenu"
             type="button"
-            class="relative inline-flex items-center justify-center p-2 "
+            class="relative inline-flex items-center justify-center p-2"
           >
             <span class="sr-only">Open main menu</span>
-            <svg width="24" height="25" v-if="!mobileMenuOpen"
-            class="block w-6 h-6" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 6.98477H20V8.98477H4V6.98477ZM4 11.9848H20V13.9848H4V11.9848ZM4 16.9848H20V18.9848H4V16.9848Z" fill="black"/>
-              </svg>
+            <svg
+              width="24"
+              height="25"
+              v-if="!mobileMenuOpen"
+              class="block w-6 h-6"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 6.98477H20V8.98477H4V6.98477ZM4 11.9848H20V13.9848H4V11.9848ZM4 16.9848H20V18.9848H4V16.9848Z"
+                fill="black"
+              />
+            </svg>
             <svg
               v-else
               class="block w-6 h-6"
@@ -86,36 +96,41 @@ const toggleMobileMenu = () => {
           </div>
           <!-- Auth buttons -->
           <div class="flex items-center gap-4">
-            <button
-              type="button"
+            <RouterLink
+              to="/register"
               class="relative px-4 py-3 bg-white border rounded-lg text-primary-60 border-primary-60"
             >
               Create account
-            </button>
-            <button
-              type="button"
-              class="relative w-[84px] p-3 text-white rounded-lg bg-primary-60 focus:outline-none"
+            </RouterLink>
+            <RouterLink
+              to="/login"
+              class="relative w-[84px] p-3 text-white rounded-lg bg-primary-60 text-center"
             >
               Login
-            </button>
+            </RouterLink>
           </div>
         </div>
       </div>
     </AppContainer>
 
     <!-- Mobile menu -->
-      <div :class="[mobileMenuOpen ? 'right-6': '-right-96','transition-all ease-in-out duration-300 lg:hidden absolute z-30 p-4 space-y-1 bg-white border rounded-lg shadow-sm top-28']">
-        <RouterLink
-          v-for="item in navItems"
-          :key="item.name"
-          :to="item.href"
-          :class="[
-            isActiveLink(item.href) ? 'text-primary-50 underline underline-offset-4' : 'text-gray',
-            'block rounded-md px-3 py-2 text-sm'
-          ]"
-          :aria-current="isActiveLink(item.href) ? 'page' : undefined"
-          >{{ item.name }}</RouterLink
-        >
-      </div>
+    <div
+      :class="[
+        mobileMenuOpen ? 'right-6' : '-right-96',
+        'transition-all ease-in-out duration-300 lg:hidden absolute z-30 p-4 space-y-1 bg-white border rounded-lg shadow-sm top-28'
+      ]"
+    >
+      <RouterLink
+        v-for="item in navItems"
+        :key="item.name"
+        :to="item.href"
+        :class="[
+          isActiveLink(item.href) ? 'text-primary-50 underline underline-offset-4' : 'text-gray',
+          'block rounded-md px-3 py-2 text-sm'
+        ]"
+        :aria-current="isActiveLink(item.href) ? 'page' : undefined"
+        >{{ item.name }}</RouterLink
+      >
+    </div>
   </nav>
 </template>

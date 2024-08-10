@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed } from 'vue'
 
 interface Props {
-  class?: string;
+  class?: string
 }
 
-const props = defineProps<Props>();
+const props = defineProps<Props>()
 
 const containerClass = computed(() => {
-  return ['app-container', props.class].filter(Boolean).join(' ');
-});
+  return ['app-container', props.class].filter(Boolean).join(' ')
+})
 </script>
 
 <template>
