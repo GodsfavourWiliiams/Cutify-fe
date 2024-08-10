@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import AppContainer from './AppContainer.vue';
-import Button from './Button.vue';
-import IconArrowDown from './icons/IconArrowDown.vue';
-import IconCalendar from './icons/IconCalendar.vue';
-import IconLocation from './icons/IconLocation.vue';
-import IconSearch from './icons/IconSearch.vue';
-import IconArrowLeft from './icons/IconArrowLeft.vue';
+import { ref } from 'vue'
+import AppContainer from './AppContainer.vue'
+import Button from './Button.vue'
+import IconArrowDown from './icons/IconArrowDown.vue'
+import IconCalendar from './icons/IconCalendar.vue'
+import IconLocation from './icons/IconLocation.vue'
+import IconSearch from './icons/IconSearch.vue'
+import IconArrowLeft from './icons/IconArrowLeft.vue'
 
 const images = ref([
   { src: '/src/assets/category-two.png', title: 'Beautiful Sunset' },
@@ -96,20 +96,17 @@ const scroll = (direction: 'next' | 'prev') => {
                 @click="scroll('prev')"
                 class="flex items-center justify-center p-2 rounded-full w-7 h-7 bg-primary-50"
               >
-              <IconArrowLeft/>
+                <IconArrowLeft />
               </button>
               <button
                 @click="scroll('next')"
                 class="flex items-center justify-center p-2 rotate-180 rounded-full w-7 h-7 bg-primary-50"
               >
-                <IconArrowLeft/>
+                <IconArrowLeft />
               </button>
             </div>
           </div>
-          <div
-            ref="scrollContainer"
-            class="relative flex gap-4 overflow-x-auto "
-          >
+          <div ref="scrollContainer" class="relative flex gap-4 overflow-x-auto">
             <!-- <div class="shrink-0 snap-center sm:w-2" /> -->
             <div
               v-for="(image, index) in images"

@@ -12,7 +12,7 @@ export default {
           30: '#ABD7EE',
           40: '#73BCE3',
           50: '#57AEDD',
-          60: '#4991B8',
+          60: '#4991B8'
         },
         secondary: {
           DEFAULT: '#BABD4C',
@@ -21,7 +21,7 @@ export default {
           30: '#DDC6A6',
           40: '#C6A06A',
           50: '#BABD4C',
-          60: '#9B763F',
+          60: '#9B763F'
         },
         gray: {
           DEFAULT: '#212227',
@@ -29,8 +29,7 @@ export default {
           20: '#B5B5B7',
           30: '#909193',
           40: '#6B6C6F',
-          50: '#46474B',
-          60: '#212227',
+          50: '#46474B'
         },
         error: {
           DEFAULT: '#FF459C',
@@ -39,7 +38,7 @@ export default {
           30: '#FFA4AE',
           40: '#FF8692',
           50: '#FF6777',
-          60: '#AA313D',
+          60: '#AA313D'
         },
         success: {
           DEFAULT: '#21D19F',
@@ -48,10 +47,10 @@ export default {
           30: '#90E8CF',
           40: '#6BE0BF',
           50: '#46D9AF',
-          60: '#168B6A',
-        },
-      },
-    },
+          60: '#168B6A'
+        }
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }

@@ -33,7 +33,7 @@ import AppContainer from './AppContainer.vue'
           :rating="'5.0'"
           :reviews="'100 reviews'"
           :image="'/src/assets/service-img-two.png'"
-           :className="'w-full'"
+          :className="'w-full'"
         />
         <ServiceCard
           :title="'Hollaja MakeUp studio'"
@@ -41,7 +41,7 @@ import AppContainer from './AppContainer.vue'
           :rating="'5.0'"
           :reviews="'100 reviews'"
           :image="'/src/assets/service-img-three.png'"
-           :className="'w-full'"
+          :className="'w-full'"
         />
       </div>
     </div>
