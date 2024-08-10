@@ -3,5 +3,5 @@ import AppContainer from '@/components/AppContainer.vue';
 </script>
 
 <template>
-  <AppContainer>Contact page</AppContainer>
+  <AppContainer>Our Blogs</AppContainer>
 </template>
