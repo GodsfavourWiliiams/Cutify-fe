@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import AppContainer from './AppContainer.vue'
-import Button from './Button.vue'
-import IconArrowDown from './icons/IconArrowDown.vue'
-import IconCalendar from './icons/IconCalendar.vue'
-import IconLocation from './icons/IconLocation.vue'
-import IconSearch from './icons/IconSearch.vue'
+import { ref } from 'vue';
+import AppContainer from './AppContainer.vue';
+import Button from './Button.vue';
+import IconArrowDown from './icons/IconArrowDown.vue';
+import IconCalendar from './icons/IconCalendar.vue';
+import IconLocation from './icons/IconLocation.vue';
+import IconSearch from './icons/IconSearch.vue';
+import IconArrowLeft from './icons/IconArrowLeft.vue';
 
 const images = ref([
   { src: '/src/assets/category-two.png', title: 'Beautiful Sunset' },
@@ -91,31 +92,35 @@ const scroll = (direction: 'next' | 'prev') => {
           <div class="flex items-center justify-between gap-4">
             <h1 class="text-white">Catagories</h1>
             <div class="flex items-center gap-4">
-              <Button
+              <button
                 @click="scroll('prev')"
-                class="w-6 h-6 p-2 bg-white bg-opacity-50 rounded-full "
+                class="flex items-center justify-center p-2 rounded-full w-7 h-7 bg-primary-50"
               >
-                &lt;
-              </Button>
-              <Button
+              <IconArrowLeft/>
+              </button>
+              <button
                 @click="scroll('next')"
-                class="w-6 h-6 p-2 bg-white bg-opacity-50 rounded-full"
+                class="flex items-center justify-center p-2 rotate-180 rounded-full w-7 h-7 bg-primary-50"
               >
-                &gt;
-              </Button>
+                <IconArrowLeft/>
+              </button>
             </div>
           </div>
           <div
             ref="scrollContainer"
-            class="relative flex gap-4 overflow-x-auto transform-gpu snap-x snap-mandatory"
+            class="relative flex gap-4 overflow-x-auto "
           >
             <!-- <div class="shrink-0 snap-center sm:w-2" /> -->
-            <div v-for="(image, index) in images" :key="index" class="flex flex-col gap-5 shrink-0 snap-center">
+            <div
+              v-for="(image, index) in images"
+              :key="index"
+              class="flex flex-col gap-4 shrink-0 snap-center"
+            >
               <img
                 :src="image.src"
                 :title="'Image' + (index + 1)"
                 :alt="'Image' + (index + 1)"
-                class="object-cover w-[320px] h-full rounded-lg shrink-0 snap-center snap-always"
+                class="object-cover w-[320px] h-full rounded-lg"
               />
 
               <h1 class="text-sm text-center text-white">{{ image.title }}</h1>

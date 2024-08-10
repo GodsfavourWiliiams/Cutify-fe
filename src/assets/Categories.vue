@@ -6,6 +6,7 @@ import IconArrowDown from './icons/IconArrowDown.vue'
 import IconCalendar from './icons/IconCalendar.vue'
 import IconLocation from './icons/IconLocation.vue'
 import IconSearch from './icons/IconSearch.vue'
+import IconArrowLeft from '@/components/icons/IconArrowLeft.vue'
 
 const images = ref([
   { src: '/src/assets/category-two.png', title: 'Beautiful Sunset' },
@@ -34,7 +35,7 @@ const scroll = (direction: 'next' | 'prev') => {
 <template>
   <div class="bg-primary-60">
     <AppContainer>
-      <div class="flex flex-col items-center justify-center gap-5 py-10 sm:py-20">
+      <div class="flex flex-col items-center justify-center gap-5 py-10 sm:py-28">
         <h1 class="text-xl font-medium text-center text-white sm:text-[32px]">
           Find beauty and wellness services near you
         </h1>
@@ -86,44 +87,35 @@ const scroll = (direction: 'next' | 'prev') => {
           <Button variant="secondary" size="lg"><IconSearch /> Knotless braids</Button>
           <Button variant="secondary" size="lg"><IconSearch /> Hair treatment</Button>
         </div>
-        <!-- Categories -->
-        <div class="relative mt-10 space-y-5">
-          <div class="flex items-center justify-between gap-4">
-            <h1 class="text-white">Catagories</h1>
-            <div class="flex items-center gap-4">
-              <Button
-                @click="scroll('prev')"
-                class="w-6 h-6 p-2 bg-white bg-opacity-50 rounded-full "
-              >
-                &lt;
-              </Button>
-              <Button
-                @click="scroll('next')"
-                class="w-6 h-6 p-2 bg-white bg-opacity-50 rounded-full"
-              >
-                &gt;
-              </Button>
-            </div>
-          </div>
-          <div
-            ref="scrollContainer"
-            class="relative flex gap-4 overflow-x-auto transform-gpu snap-x snap-mandatory"
-          >
-            <!-- <div class="shrink-0 snap-center sm:w-2" /> -->
-            <div v-for="(image, index) in images" :key="index" class="flex flex-col gap-5 shrink-0 snap-center">
-              <img
-                :src="image.src"
-                :title="'Image' + (index + 1)"
-                :alt="'Image' + (index + 1)"
-                class="object-cover w-[320px] h-full rounded-lg shrink-0 snap-center snap-always"
-              />
-
-              <h1 class="text-sm text-center text-white">{{ image.title }}</h1>
-            </div>
-            <div class="shrink-0 snap-center sm:w-2" />
-          </div>
-        </div>
       </div>
     </AppContainer>
+    <!-- Categories -->
+    <div class="relative flex flex-col h-full gap-5 mt-10">
+      <div class="flex items-center justify-between gap-4">
+        <h1 class="text-white">Catagories</h1>
+        <div class="flex items-center gap-4">
+          <Button @click="scroll('prev')" class="w-6 h-6 bg-white bg-opacity-50 rounded-full">
+            <IconArrowLeft />
+          </Button>
+          <Button @click="scroll('next')" class="w-6 h-6 bg-white bg-opacity-50 rounded-full">
+            <IconArrowLeft />
+          </Button>
+        </div>
+      </div>
+      <div ref="scrollContainer" class="flex gap-4 overflow-x-auto [&::-webkit-scrollbar]:hidden">
+        <!-- <div class="shrink-0 snap-center sm:w-2" /> -->
+        <div v-for="(image, index) in images" :key="index" class="h-full">
+          <img
+            :src="image.src"
+            :title="'Image' + (index + 1)"
+            :alt="'Image' + (index + 1)"
+            class="object-cover w-[320px] h-[170px] rounded-lg"
+          />
+
+          <h1 class="text-sm text-center text-white">{{ image.title }}</h1>
+        </div>
+        <div class="shrink-0 snap-center sm:w-2" />
+      </div>
+    </div>
   </div>
 </template>
