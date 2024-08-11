@@ -5,18 +5,23 @@ import Button from './Button.vue'
 import IconCalendar from './icons/IconCalendar.vue'
 import IconLocation from './icons/IconLocation.vue'
 import IconSearch from './icons/IconSearch.vue'
-import IconArrowLeft from './icons/IconArrowLeft.vue'
+import IconArrowLeft from './icons/IconArrowLeft.vue';
+import categoryOne from '@/assets/images/category-one.png';
+import categoryTwo from '@/assets/images/category-two.png';
+import categoryThree from '@/assets/images/category-three.png';
+import categoryFour from '@/assets/images/category-four.png';
+
 
 const images = ref([
-  { src: 'src/assets/category-two.png', title: 'Beautiful Sunset' },
-  { src: 'src/assets/category-three.png', title: 'Mountain Landscape' },
-  { src: 'src/assets/category-one.png', title: 'Ocean Waves' },
-  { src: 'src/assets/category-four.png', title: 'City Skyline' },
-  { src: 'src/assets/category-one.png', title: 'Forest Trail' },
-  { src: 'src/assets/category-two.png', title: 'Desert Sands' },
-  { src: 'src/assets/category-three.png', title: 'Snowy Peaks' },
-  { src: 'src/assets/category-four.png', title: 'Tropical Beach' }
-])
+  { src: categoryTwo, title: 'Beautiful Sunset' },
+  { src: categoryThree, title: 'Mountain Landscape' },
+  { src: categoryOne, title: 'Ocean Waves' },
+  { src: categoryFour, title: 'City Skyline' },
+  { src: categoryOne, title: 'Forest Trail' },
+  { src: categoryTwo, title: 'Desert Sands' },
+  { src: categoryThree, title: 'Snowy Peaks' },
+  { src: categoryFour, title: 'Tropical Beach' }
+]);
 
 const scrollContainer = ref<HTMLElement | null>(null)
 

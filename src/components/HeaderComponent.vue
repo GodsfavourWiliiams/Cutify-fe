@@ -29,7 +29,7 @@ const toggleMobileMenu = () => {
       <div class="relative flex items-center justify-between h-[100px] overflow-hidden">
         <!-- Logo and navigation -->
         <RouterLink to="/" class="flex items-center flex-shrink-0">
-          <img class="w-auto h-[60px]" src="/src/assets/cutify-logo.png" alt="Cutify" />
+          <img class="w-auto h-[60px]" src="/src/assets/images/cutify-logo.png" alt="Cutify" />
         </RouterLink>
 
         <!-- Mobile menu button -->

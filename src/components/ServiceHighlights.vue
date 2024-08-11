@@ -1,7 +1,13 @@
 <script setup>
-import ServiceCard from './ServiceCard.vue'
-import AppContainer from './AppContainer.vue'
-import IconArrowRight from './icons/IconArrowRight.vue'
+import ServiceCard from './ServiceCard.vue';
+import AppContainer from './AppContainer.vue';
+import IconArrowRight from './icons/IconArrowRight.vue';
+import serviceImgOne from '@/assets/images/service-img-one.png';
+import serviceImgTwo from '@/assets/images/service-img-two.png';
+import serviceImgThree from '@/assets/images/service-img-three.png';
+import categoryThree from '@/assets/images/category-three.png';
+import serviceImgFive from '@/assets/images/service-img-five.png';
+import serviceImgSix from '@/assets/images/service-img-six.png';
 </script>
 
 <template>
@@ -39,7 +45,7 @@ import IconArrowRight from './icons/IconArrowRight.vue'
         :address="'No 26. St Ives street. Lagos island. Lagos.'"
         :rating="'5.0'"
         :reviews="'100 reviews'"
-        :image="'src/assets/service-img-one.png'"
+        :image="serviceImgOne"
         :className="'w-full md:w-fit lg:w-full'"
       />
       <div class="flex items-center w-full gap-2.5 sm:gap-4">
@@ -48,7 +54,7 @@ import IconArrowRight from './icons/IconArrowRight.vue'
           :address="'No 26. St Ives street. Lagos island. Lagos.'"
           :rating="'5.0'"
           :reviews="'100 reviews'"
-          :image="'src/assets/service-img-two.png'"
+          :image="serviceImgTwo"
           :className="'w-full'"
         />
         <ServiceCard
@@ -56,7 +62,7 @@ import IconArrowRight from './icons/IconArrowRight.vue'
           :address="'No 26. St Ives street. Lagos island. Lagos.'"
           :rating="'5.0'"
           :reviews="'100 reviews'"
-          :image="'src/assets/service-img-three.png'"
+          :image="serviceImgThree"
           :className="'w-full'"
         />
       </div>
@@ -68,7 +74,7 @@ import IconArrowRight from './icons/IconArrowRight.vue'
           :address="'No 26. St Ives street. Lagos island. Lagos.'"
           :rating="'5.0'"
           :reviews="'100 reviews'"
-          :image="'src/assets/category-three.png'"
+          :image="categoryThree"
           :className="'w-full'"
         />
         <ServiceCard
@@ -76,7 +82,7 @@ import IconArrowRight from './icons/IconArrowRight.vue'
           :address="'No 26. St Ives street. Lagos island. Lagos.'"
           :rating="'5.0'"
           :reviews="'100 reviews'"
-          :image="'src/assets/service-img-five.png'"
+          :image="serviceImgFive"
           :className="'w-full'"
         />
       </div>
@@ -85,7 +91,7 @@ import IconArrowRight from './icons/IconArrowRight.vue'
         :address="'No 26. St Ives street. Lagos island. Lagos.'"
         :rating="'5.0'"
         :reviews="'100 reviews'"
-        :image="'src/assets/service-img-six.png'"
+        :image="serviceImgSix"
         :className="'w-full md:w-fit lg:w-full'"
       />
     </div>
