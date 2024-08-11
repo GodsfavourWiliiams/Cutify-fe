@@ -117,7 +117,7 @@ const toggleMobileMenu = () => {
     <div
       :class="[
         mobileMenuOpen ? 'right-6 absolute' : '-right-96 fixed',
-        'transition-all ease-in-out duration-300 lg:hidden z-30 p-4 space-y-1 bg-white border rounded-lg shadow-sm top-28'
+        'transition-all ease-in-out duration-300 lg:hidden z-50 p-4 space-y-1 bg-white border rounded-lg shadow-sm top-24'
       ]"
     >
       <RouterLink

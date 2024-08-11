@@ -5,12 +5,11 @@ import Button from './Button.vue'
 import IconCalendar from './icons/IconCalendar.vue'
 import IconLocation from './icons/IconLocation.vue'
 import IconSearch from './icons/IconSearch.vue'
-import IconArrowLeft from './icons/IconArrowLeft.vue';
-import categoryOne from '@/assets/images/category-one.png';
-import categoryTwo from '@/assets/images/category-two.png';
-import categoryThree from '@/assets/images/category-three.png';
-import categoryFour from '@/assets/images/category-four.png';
-
+import IconArrowLeft from './icons/IconArrowLeft.vue'
+import categoryOne from '@/assets/images/category-one.png'
+import categoryTwo from '@/assets/images/category-two.png'
+import categoryThree from '@/assets/images/category-three.png'
+import categoryFour from '@/assets/images/category-four.png'
 
 const images = ref([
   { src: categoryTwo, title: 'Beautiful Sunset' },
@@ -21,7 +20,7 @@ const images = ref([
   { src: categoryTwo, title: 'Desert Sands' },
   { src: categoryThree, title: 'Snowy Peaks' },
   { src: categoryFour, title: 'Tropical Beach' }
-]);
+])
 
 const scrollContainer = ref<HTMLElement | null>(null)
 
