@@ -13,7 +13,7 @@ defineProps({
 })
 
 const startIconPadding = 'pl-4'
-const endIconPadding = 'sm:pr-4'
+const endIconPadding = 'pr-4'
 const bothIconsPadding = 'pl-10 pr-10'
 
 const combinedPadding = computed(() => {
@@ -26,7 +26,7 @@ const combinedPadding = computed(() => {
   return ''
 })
 
-const slots = useSlots();
+const slots = useSlots()
 
 // Define emit function to emit events
 const emit = defineEmits(['update:modelValue'])

@@ -21,6 +21,20 @@ const mobileMenuOpen = ref(false)
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
 }
+
+function handleNavClick(href: string) {
+  if (href.startsWith('#')) {
+    // Call scroll function
+    scrollToSection(href.substring(1)) // Remove the '#' and pass the ID
+  }
+}
+
+function scrollToSection(sectionId: string) {
+  const targetSection = document.getElementById(sectionId)
+  if (targetSection) {
+    targetSection.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 </script>
 
 <template>
@@ -89,6 +103,7 @@ const toggleMobileMenu = () => {
                 'text-base',
                 'underline-offset-4'
               ]"
+              @click="handleNavClick(item.href)"
               :aria-current="isActiveLink(item.href) ? 'page' : undefined"
             >
               {{ item.name }}
@@ -128,7 +143,12 @@ const toggleMobileMenu = () => {
           isActiveLink(item.href) ? 'text-primary-50 underline underline-offset-4' : 'text-gray',
           'block rounded-md px-3 py-2 text-sm'
         ]"
-        @click="toggleMobileMenu"
+        @click="
+          () => {
+            toggleMobileMenu()
+            handleNavClick(item.href)
+          }
+        "
         :aria-current="isActiveLink(item.href) ? 'page' : undefined"
         >{{ item.name }}</RouterLink
       >

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import AppContainer from '@/components/AppContainer.vue'
+import Blog from '@/components/Blog.vue'
 </script>
 
 <template>
-  <AppContainer>Our Blogs</AppContainer>
+  <Blog />
 </template>
