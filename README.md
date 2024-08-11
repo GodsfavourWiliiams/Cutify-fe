@@ -1,39 +1,45 @@
-# cutify-web-fe
+# CUTIFY WEB FE
 
-This template should help get you started developing with Vue 3 in Vite.
+This repo house the frontend for CUTIFY website (test)
 
-## Recommended IDE Setup
+### Getting Started
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+1. Clone the repo
+2. Install dependencies
+3. Run the app
 
-## Type Support for `.vue` Imports in TS
+### Prerequisites
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Node.js
+- Yarn
 
-## Customize configuration
+### Project setup
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+1. Clone the repo
 
-## Project Setup
+```sh
+git clone [repoLink]
+```
+
+2. Install dependencies
 
 ```sh
 yarn
 ```
 
-### Compile and Hot-Reload for Development
+3. Compile and Hot-Reload for Development
 
 ```sh
 yarn dev
 ```
 
-### Type-Check, Compile and Minify for Production
+4. Type-Check, Compile and Minify for Production
 
 ```sh
 yarn build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+5. Lint with ESLint
 
 ```sh
 yarn lint
-```
