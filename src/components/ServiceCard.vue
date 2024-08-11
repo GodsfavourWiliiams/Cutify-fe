@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import IconArrowRight from './icons/IconArrowRight.vue'
 import IconLocation from './icons/IconLocation.vue'
 defineProps<{
   title: string
@@ -11,15 +12,15 @@ defineProps<{
 </script>
 
 <template>
-  <div :class="[className, 'border rounded-lg border-[#F1E8DB] h-[381px] bg-[#FEFDFB]']">
+  <div :class="[className, 'border rounded-lg border-[#F1E8DB] h-full sm:h-[381px] bg-[#FEFDFB]']">
     <img
       :src="image"
-      class="object-cover w-full h-full max-h-[221px] rounded-t-lg bg-zinc-50"
+      class="object-cover w-full h-[200px] sm:h-full max-h-[221px] rounded-t-lg bg-zinc-50"
       :alt="title"
     />
 
-    <div class="flex flex-col items-start gap-4 p-4 lg:p-6 text-start">
-      <div class="flex flex-col gap-4">
+    <div class="flex flex-col items-start gap-2 p-4 sm:gap-4 lg:p-6 text-start">
+      <div class="flex flex-col gap-2 sm:gap-4">
         <h2 class="text-sm font-medium sm:text-base text-gray">{{ title }}</h2>
         <div class="inline-flex gap-2">
           <IconLocation />
@@ -27,7 +28,9 @@ defineProps<{
         </div>
       </div>
 
-      <div class="flex items-center justify-between w-full gap-4 text-xs lg:text-sm">
+      <div
+        class="flex flex-col justify-between w-full gap-2 text-xs sm:gap-4 sm:flex-row sm:items-center lg:text-sm"
+      >
         <div class="flex items-center gap-2">
           <svg
             width="24"
@@ -44,18 +47,9 @@ defineProps<{
           <span class="ml-1 text-gray-50">{{ rating }} </span>
           <span class="ml-1 underline text-gray-40">{{ reviews }}</span>
         </div>
-        <svg
-          width="14"
-          height="14"
-          viewBox="0 0 14 14"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M5.293 12.293L6.707 13.707L13.414 6.99997L6.707 0.292969L5.293 1.70697L9.586 5.99997H0V7.99997H9.586L5.293 12.293Z"
-            fill="#57AEDD"
-          />
-        </svg>
+        <div class="place-self-end">
+          <IconArrowRight />
+        </div>
       </div>
     </div>
   </div>

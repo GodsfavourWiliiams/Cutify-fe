@@ -7,9 +7,9 @@ defineProps<{
 </script>
 
 <template>
-  <div class="relative flex flex-col gap-4">
+  <div class="flex flex-col h-full gap-4">
     <div
-      class="relative z-50 px-8 py-12 bg-white border rounded-lg border-gray-10 max-sm:max-w-sm max-sm:mx-auto"
+      class="relative z-50 h-full px-6 py-10 bg-white border rounded-lg xl:px-8 xl:py-12 border-gray-10 max-sm:max-w-sm max-sm:mx-auto"
     >
       <p
         class="text-sm leading-6 text-gray-500 transition-all duration-500 min-h-24 group-hover:text-gray-800"

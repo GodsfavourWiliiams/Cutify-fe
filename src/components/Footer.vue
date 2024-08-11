@@ -51,7 +51,7 @@ const socialIcons = [
 </script>
 
 <template>
-  <footer id="footer" class="relative mt-10 bg-primary-60">
+  <footer id="footer" class="relative bg-primary-60">
     <div class="py-16 border-b border-gray-10">
       <AppContainer
         class="text-white grid grid-cols-2 min-[690px]:grid-cols-4 lg:grid-cols-6 gap-4"

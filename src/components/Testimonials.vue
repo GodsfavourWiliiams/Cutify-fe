@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import AppContainer from './AppContainer.vue'
 import TestimonialCard from './TestimonialCard.vue'
+import IconQuote from './icons/IconQuote.vue'
 
 const testimonials = [
   {
@@ -25,12 +25,15 @@ const testimonials = [
 </script>
 
 <template>
-  <div class="py-24 bg-[#F8FCFE]">
-    <AppContainer>
+  <div class="relative mt-10">
+    <div class="absolute right-0 hidden w-full lg:block -bottom-32">
+      <img src="/src/assets/Rectangle-8.svg" class="w-full h-full max-h-[600px]" alt="" />
+    </div>
+    <div class="py-24 bg-[#F8FCFE] mx-auto w-[1540px] max-w-[90%] lg:max-w-full px-4 sm:px-10">
       <div
-        class="flex flex-wrap items-start justify-center max-w-sm mx-auto gap-y-8 lg:gap-y-0 md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8 sm:max-w-2xl lg:max-w-full"
+        class="flex flex-wrap items-start justify-center max-w-sm mx-auto gap-y-0 md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8 sm:max-w-2xl lg:max-w-full"
       >
-        <div class="flex items-center w-full gap-5 lg:w-1/4">
+        <div class="flex flex-col items-start w-full gap-5 lg:w-1/4">
           <span class="block text-[32px] max-w-[268px] font-semibold text-gray leading-[48px]"
             >What people are saying about us?</span
           >
@@ -38,13 +41,16 @@ const testimonials = [
             Check out what customers and professionals are happily sharing about their Cutify
             experiences.
           </p>
-          <div class="mt-10 place">
-            <img src="/src/assets/red-right-arrow.png" alt="" class="">
+          <div class="mt-0 md:mt-10 lg:place-self-end">
+            <img src="/src/assets/red-right-arrow.png" alt="" class="" />
           </div>
         </div>
 
-        <div class="w-full mt-20 lg:w-4/5">
-          <div class="flex items-center gap-4">
+        <div class="flex flex-col w-full gap-4 -mt-11 lg:mt-10 lg:w-4/5">
+          <div class="place-self-end">
+            <IconQuote />
+          </div>
+          <div class="flex flex-wrap items-center gap-4 xl:flex-nowrap">
             <TestimonialCard
               v-for="(item, index) in testimonials"
               :key="index"
@@ -55,6 +61,6 @@ const testimonials = [
           </div>
         </div>
       </div>
-    </AppContainer>
+    </div>
   </div>
 </template>

@@ -34,62 +34,71 @@ const scroll = (direction: 'next' | 'prev') => {
 
 <template>
   <div class="bg-primary-60">
-    <AppContainer>
-      <div class="flex flex-col items-center justify-center gap-5 py-10 sm:py-20">
-        <h1 class="text-xl font-medium text-center text-white sm:text-[32px]">
-          Find beauty and wellness services near you
-        </h1>
-        <div class="flex items-center justify-center gap-4 mt-10 text-sm">
+    <div class="py-10 sm:py-20">
+      <AppContainer>
+        <div class="flex flex-col items-center justify-center gap-5">
+          <h1 class="text-2xl font-medium text-center text-white sm:text-[32px] leading-[40px]">
+            Find beauty and wellness services near you
+          </h1>
           <div
-            class="flex items-center flex-1 divide-x divide-gray-200 max-w-[864px] w-full mx-auto bg-white rounded-lg h-[56px]"
+            class="flex flex-col items-center justify-center w-full gap-4 text-sm sm:mt-10 md:w-fit md:flex-row"
           >
-            <!-- Location dropdown -->
-            <div class="flex items-center gap-2 px-4 py-2">
-              <div class="flex items-center gap-3">
-                <IconLocation />
-                <span class="text-gray-30">Location: </span>
+            <div
+              class="flex flex-col md:flex-row items-center flex-1 divide-y md:divide-y-0 md:divide-x divide-gray-200 max-w-[864px] w-full mx-auto bg-white rounded-lg h-[56px]"
+            >
+              <!-- Location dropdown -->
+              <div
+                class="flex items-center justify-between w-full gap-2 px-4 py-2 md:justify-start"
+              >
+                <div class="flex items-center gap-3">
+                  <IconLocation />
+                  <span class="text-gray-30">Location: </span>
+                </div>
+                <select class="p-3 bg-transparent appearance-none md:p-4 focus:outline-none">
+                  <option>All</option>
+                  <option>Lagos</option>
+                  <option>Uyo</option>
+                </select>
               </div>
-              <select class="p-4 bg-transparent appearance-none focus:outline-none">
-                <option>All</option>
-                <option>Lagos</option>
-                <option>Uyo</option>
-              </select>
-              <IconArrowDown />
-            </div>
 
-            <!-- Date dropdown -->
-            <div class="flex items-center gap-2 px-4 py-2">
-              <div class="flex items-center gap-3">
-                <IconCalendar />
-                <span class="text-gray-30">Date: </span>
+              <!-- Date dropdown -->
+              <div
+                class="flex items-center justify-between w-full gap-2 px-4 py-2 md:py-0 md:justify-start"
+              >
+                <div class="flex items-center gap-3">
+                  <IconCalendar />
+                  <span class="text-gray-30">Date: </span>
+                </div>
+                <select class="p-3 bg-transparent appearance-none md:p-1 focus:outline-non">
+                  <option>Any day</option>
+                </select>
               </div>
-              <select class="bg-transparent appearance-none focus:outline-none">
-                <option>Any day</option>
-              </select>
-              <IconArrowDown />
-            </div>
 
-            <!-- Search input -->
-            <div class="flex items-center w-full gap-2 px-4 py-3">
-              <IconSearch />
-              <input
-                type="text"
-                placeholder="Search for service. E.g Braids"
-                class="w-full px-4 py-1 lg:w-96 focus:outline-none placeholder:text-gray-30"
-              />
+              <!-- Search input -->
+              <div class="flex items-center w-full gap-2 px-4 py-4 md:py-0">
+                <IconSearch />
+                <input
+                  type="text"
+                  placeholder="Search for service. E.g Braids"
+                  class="w-full px-4 py-1 lg:w-96 focus:outline-none placeholder:text-gray-30"
+                />
+              </div>
             </div>
+            <!-- Search button -->
+            <Button class="p-4 md:p-7 place-self-start" size="lg"> Search </Button>
           </div>
-          <!-- Search button -->
-          <Button class="p-7" size="lg"> Search </Button>
-        </div>
-        <div class="flex items-center gap-4">
-          <Button variant="secondary" size="lg"><IconSearch /> Hair salon</Button>
-          <Button variant="secondary" size="lg"><IconSearch /> Knotless braids</Button>
-          <Button variant="secondary" size="lg"><IconSearch /> Hair treatment</Button>
-        </div>
-        <!-- Categories -->
-        <div class="relative mt-10 space-y-5">
-          <div class="flex items-center justify-between gap-4">
+          <div class="flex items-center gap-2 sm:gap-4">
+            <Button variant="secondary" class="gap-1 p-0 text-xs sm:p-4 sm:text-sm"
+              ><IconSearch :width="16" :height="16" /> Hair salon</Button
+            >
+            <Button variant="secondary" class="gap-1 p-0 text-xs sm:p-4 sm:text-sm"
+              ><IconSearch :width="16" :height="16" /> Knotless braids</Button
+            >
+            <Button variant="secondary" class="gap-1 p-0 text-xs sm:p-4 sm:text-sm"
+              ><IconSearch :width="16" :height="16" /> Hair treatment</Button
+            >
+          </div>
+          <div class="flex items-center justify-between w-full gap-4 mt-10">
             <h1 class="text-white">Catagories</h1>
             <div class="flex items-center gap-4">
               <button
@@ -106,26 +115,29 @@ const scroll = (direction: 'next' | 'prev') => {
               </button>
             </div>
           </div>
-          <div ref="scrollContainer" class="relative flex gap-4 overflow-x-auto">
-            <!-- <div class="shrink-0 snap-center sm:w-2" /> -->
-            <div
-              v-for="(image, index) in images"
-              :key="index"
-              class="flex flex-col gap-4 shrink-0 snap-center"
-            >
-              <img
-                :src="image.src"
-                :title="'Image' + (index + 1)"
-                :alt="'Image' + (index + 1)"
-                class="object-cover w-[320px] h-full rounded-lg"
-              />
+        </div>
+      </AppContainer>
+      <!-- Categories -->
+      <div class="relative flex mt-5">
+        <div class="shrink-0 snap-center sm:w-[5%] 3xl:w-[7%]  4xl-[1704px]:hidden h-48" />
+        <div ref="scrollContainer" class="relative flex gap-4 overflow-x-auto mx-auto 4xl:w-[1440px]  4xl:max-w-[90%]">
+          <div
+            v-for="(image, index) in images"
+            :key="index"
+            class="flex flex-col gap-2 text-xs shrink-0 sm:text-sm snap-center"
+          >
+            <img
+              :src="image.src"
+              :title="'Image' + (index + 1)"
+              :alt="'Image' + (index + 1)"
+              class="object-cover w-[320px] h-[170px] rounded-lg"
+            />
 
-              <h1 class="text-sm text-center text-white">{{ image.title }}</h1>
-            </div>
-            <div class="shrink-0 snap-center sm:w-2" />
+            <h1 class="text-sm text-center text-white">{{ image.title }}</h1>
           </div>
+          <div class="shrink-0 snap-center sm:w-2" />
         </div>
       </div>
-    </AppContainer>
+    </div>
   </div>
 </template>

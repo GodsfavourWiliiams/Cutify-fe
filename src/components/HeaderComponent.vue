@@ -26,7 +26,7 @@ const toggleMobileMenu = () => {
 <template>
   <nav class="bg-white">
     <AppContainer>
-      <div class="relative flex items-center justify-between h-[100px]">
+      <div class="relative flex items-center justify-between h-[100px] overflow-hidden">
         <!-- Logo and navigation -->
         <RouterLink to="/" class="flex items-center flex-shrink-0">
           <img class="w-auto h-[60px]" src="/src/assets/cutify-logo.png" alt="Cutify" />
@@ -116,8 +116,8 @@ const toggleMobileMenu = () => {
     <!-- Mobile menu -->
     <div
       :class="[
-        mobileMenuOpen ? 'right-6' : '-right-96',
-        'transition-all ease-in-out duration-300 lg:hidden absolute z-30 p-4 space-y-1 bg-white border rounded-lg shadow-sm top-28'
+        mobileMenuOpen ? 'right-6 absolute' : '-right-96 fixed',
+        'transition-all ease-in-out duration-300 lg:hidden z-30 p-4 space-y-1 bg-white border rounded-lg shadow-sm top-28'
       ]"
     >
       <RouterLink
