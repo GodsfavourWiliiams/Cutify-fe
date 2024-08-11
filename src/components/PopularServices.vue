@@ -3,9 +3,8 @@ import FeatureItem from './FeatureItem.vue'
 import Button from './Button.vue'
 import AppContainer from './AppContainer.vue'
 
-
 type Feature = {
-  icon: 'booking' | 'cog' | 'user' | 'users' | 'bell' | 'creditCard';
+  icon: 'booking' | 'cog' | 'user' | 'users' | 'bell' | 'creditCard'
   title: string
   description: string
 }

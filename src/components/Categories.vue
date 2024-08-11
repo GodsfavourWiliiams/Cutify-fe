@@ -2,21 +2,20 @@
 import { ref } from 'vue'
 import AppContainer from './AppContainer.vue'
 import Button from './Button.vue'
-import IconArrowDown from './icons/IconArrowDown.vue'
 import IconCalendar from './icons/IconCalendar.vue'
 import IconLocation from './icons/IconLocation.vue'
 import IconSearch from './icons/IconSearch.vue'
 import IconArrowLeft from './icons/IconArrowLeft.vue'
 
 const images = ref([
-  { src: '/src/assets/category-two.png', title: 'Beautiful Sunset' },
-  { src: '/src/assets/category-three.png', title: 'Mountain Landscape' },
-  { src: '/src/assets/category-one.png', title: 'Ocean Waves' },
-  { src: '/src/assets/category-four.png', title: 'City Skyline' },
-  { src: '/src/assets/category-one.png', title: 'Forest Trail' },
-  { src: '/src/assets/category-two.png', title: 'Desert Sands' },
-  { src: '/src/assets/category-three.png', title: 'Snowy Peaks' },
-  { src: '/src/assets/category-four.png', title: 'Tropical Beach' }
+  { src: 'src/assets/category-two.png', title: 'Beautiful Sunset' },
+  { src: 'src/assets/category-three.png', title: 'Mountain Landscape' },
+  { src: 'src/assets/category-one.png', title: 'Ocean Waves' },
+  { src: 'src/assets/category-four.png', title: 'City Skyline' },
+  { src: 'src/assets/category-one.png', title: 'Forest Trail' },
+  { src: 'src/assets/category-two.png', title: 'Desert Sands' },
+  { src: 'src/assets/category-three.png', title: 'Snowy Peaks' },
+  { src: 'src/assets/category-four.png', title: 'Tropical Beach' }
 ])
 
 const scrollContainer = ref<HTMLElement | null>(null)
@@ -119,8 +118,13 @@ const scroll = (direction: 'next' | 'prev') => {
       </AppContainer>
       <!-- Categories -->
       <div class="flex items-center mt-5">
-        <div class="shrink-0 snap-center hidden nano:block nano:w-[5%] 3xl:w-[7%] 4xl-[1704px]:hidden h-48" />
-        <div ref="scrollContainer" class="relative flex flex-col nano:flex-row gap-4 overflow-x-auto mx-auto 4xl:w-[1440px] 4xl:max-w-[90%]">
+        <div
+          class="shrink-0 snap-center hidden nano:block nano:w-[5%] 3xl:w-[7%] 4xl-[1704px]:hidden h-48"
+        />
+        <div
+          ref="scrollContainer"
+          class="relative flex flex-col nano:flex-row gap-4 overflow-x-auto mx-auto 4xl:w-[1440px] 4xl:max-w-[90%]"
+        >
           <div
             v-for="(image, index) in images"
             :key="index"
