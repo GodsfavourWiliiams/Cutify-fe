@@ -12,7 +12,8 @@ export default {
           30: '#ABD7EE',
           40: '#73BCE3',
           50: '#57AEDD',
-          60: '#4991B8'
+          60: '#4991B8',
+          70: '#293683'
         },
         secondary: {
           DEFAULT: '#BABD4C',

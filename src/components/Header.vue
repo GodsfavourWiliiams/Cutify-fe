@@ -5,8 +5,8 @@ import AppContainer from './AppContainer.vue'
 
 const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'Services', href: '#' },
-  { name: 'Testimonials', href: '#' },
+  { name: 'Services', href: '#services' },
+  { name: 'Testimonials', href: '#testimonials' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact us', href: '/contact-us' }
 ]
@@ -97,13 +97,13 @@ const toggleMobileMenu = () => {
           <!-- Auth buttons -->
           <div class="flex items-center gap-4">
             <RouterLink
-              to="/register"
+              to="/auth/sign-up"
               class="relative px-4 py-3 bg-white border rounded-lg text-primary-60 border-primary-60"
             >
               Create account
             </RouterLink>
             <RouterLink
-              to="/login"
+              to="/auth/sign-in"
               class="relative w-[84px] p-3 text-white rounded-lg bg-primary-60 text-center"
             >
               Login
@@ -117,7 +117,7 @@ const toggleMobileMenu = () => {
     <div
       :class="[
         mobileMenuOpen ? 'right-6 absolute' : '-right-96 fixed',
-        'transition-all ease-in-out duration-300 lg:hidden z-50 p-4 space-y-1 bg-white border rounded-lg shadow-sm top-24'
+        'transition-all ease-in-out duration-500 lg:hidden z-50 p-4 space-y-1 bg-white border rounded-lg shadow-sm top-24'
       ]"
     >
       <RouterLink
@@ -128,9 +128,24 @@ const toggleMobileMenu = () => {
           isActiveLink(item.href) ? 'text-primary-50 underline underline-offset-4' : 'text-gray',
           'block rounded-md px-3 py-2 text-sm'
         ]"
+        @click="toggleMobileMenu"
         :aria-current="isActiveLink(item.href) ? 'page' : undefined"
         >{{ item.name }}</RouterLink
       >
+      <div class="grid grid-cols-2 gap-4">
+        <RouterLink
+          to="/auth/sign-up"
+          class="relative px-4 py-3 bg-white border rounded-lg text-primary-60 border-primary-60"
+        >
+          Create account
+        </RouterLink>
+        <RouterLink
+          to="/auth/sign-in"
+          class="relative w-full p-3 text-center text-white rounded-lg bg-primary-60"
+        >
+          Login
+        </RouterLink>
+      </div>
     </div>
   </nav>
 </template>

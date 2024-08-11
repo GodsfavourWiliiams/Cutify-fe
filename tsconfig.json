@@ -4,7 +4,11 @@
     "moduleResolution": "node",
     "allowJs": true,
     "isolatedModules": true,
-    "types": ["vite/client", "vue"]
+    "types": ["vite/client", "vue"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "references": [
     {

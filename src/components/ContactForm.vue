@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import Button from './Button.vue'
+import Button from './Common/Button.vue'
 </script>
 
 <template>
-  <div class="lg:order-2 order-1 max-w-[536px] w-full px-4 sm:px-6 py-8 space-y-6 border-gray-10 bg-white border rounded-lg h-fit mb-0 lg:mb-20 xl:mb-0" 
-  style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+  <div
+    class="lg:order-2 order-1 max-w-[536px] w-full px-4 sm:px-6 py-8 space-y-6 border-gray-10 bg-white border rounded-lg h-fit mb-0 lg:mb-20 xl:mb-0"
+    style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)"
+  >
     <div class="flex flex-col items-start gap-4">
       <h2 class="text-xl sm:text-3xl leading-[40px] font-semibold text-gray">Send a message</h2>
       <p class="leading-[32px] text-sm sm:text-base text-gray-50">

@@ -8,7 +8,7 @@ import IconLinkedin from './icons/IconLinkedin.vue'
 import AppContainer from './AppContainer.vue'
 import BlogBg from '@/assets/images/blog-bg.png'
 import ContactBg from '@/assets/images/contact-bg.png'
-import Button from './Button.vue'
+import Button from './Common/Button.vue'
 
 const route = useRoute()
 
@@ -100,7 +100,7 @@ const pageContent = computed(() => {
           {{ pageContent.title }}
         </h1>
       </div>
-      <div v-if="isContactPage" class="items-center hidden gap-4 lg:flex">
+      <div v-if="isContactPage" class="items-center hidden gap-4 text-white lg:flex">
         <IconFacebook />
         <IconInstagram />
         <IconX />
