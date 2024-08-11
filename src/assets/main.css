@@ -2,6 +2,138 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro Black Az.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro Black Italic Az.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro Bold Az.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro Bold Italic Az.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro ExtraLight Az.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro ExtraLight Italic Az.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro Light Az.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro Light Italic Az.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro Medium Az.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro Medium Italic Az.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro Regular Az.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro Regular Italic Az.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro Semi Bold Az.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro Semi Bold Italic Az.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro UltraLight Az.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url('@/assets/fonts/Sofia Pro UltraLight Italic Az.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+  }
+}
+
 .app-container {
   @apply mx-auto w-[1440px] max-w-[90%];
+}
+
+body {
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  font-family: 'Sofia Pro', Inter, -apple-system;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
