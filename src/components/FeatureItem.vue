@@ -8,10 +8,10 @@ import IconBell from './icons/IconBell.vue'
 import IconCreditCard from './icons/IconCreditCard.vue'
 
 const props = defineProps<{
-  icon: keyof typeof icons;
-  title: string;
-  description: string;
-}>();
+  icon: keyof typeof icons
+  title: string
+  description: string
+}>()
 
 const icons = {
   booking: IconBooking,
@@ -20,14 +20,14 @@ const icons = {
   users: IconUsers,
   bell: IconBell,
   creditCard: IconCreditCard
-} as const;
+} as const
 
-type IconKey = keyof typeof icons;
+type IconKey = keyof typeof icons
 
 const iconComponent = computed(() => {
-  const key = props.icon as IconKey;
-  return icons[key] || 'div';
-});
+  const key = props.icon as IconKey
+  return icons[key] || 'div'
+})
 </script>
 
 <template>

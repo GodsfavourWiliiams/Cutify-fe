@@ -39,7 +39,7 @@ import IconArrowRight from './icons/IconArrowRight.vue'
         :address="'No 26. St Ives street. Lagos island. Lagos.'"
         :rating="'5.0'"
         :reviews="'100 reviews'"
-        :image="'/src/assets/service-img-one.png'"
+        :image="'src/assets/service-img-one.png'"
         :className="'w-full md:w-fit lg:w-full'"
       />
       <div class="flex items-center w-full gap-2.5 sm:gap-4">
@@ -48,7 +48,7 @@ import IconArrowRight from './icons/IconArrowRight.vue'
           :address="'No 26. St Ives street. Lagos island. Lagos.'"
           :rating="'5.0'"
           :reviews="'100 reviews'"
-          :image="'/src/assets/service-img-two.png'"
+          :image="'src/assets/service-img-two.png'"
           :className="'w-full'"
         />
         <ServiceCard
@@ -56,7 +56,7 @@ import IconArrowRight from './icons/IconArrowRight.vue'
           :address="'No 26. St Ives street. Lagos island. Lagos.'"
           :rating="'5.0'"
           :reviews="'100 reviews'"
-          :image="'/src/assets/service-img-three.png'"
+          :image="'src/assets/service-img-three.png'"
           :className="'w-full'"
         />
       </div>
@@ -68,7 +68,7 @@ import IconArrowRight from './icons/IconArrowRight.vue'
           :address="'No 26. St Ives street. Lagos island. Lagos.'"
           :rating="'5.0'"
           :reviews="'100 reviews'"
-          :image="'/src/assets/category-three.png'"
+          :image="'src/assets/category-three.png'"
           :className="'w-full'"
         />
         <ServiceCard
@@ -76,7 +76,7 @@ import IconArrowRight from './icons/IconArrowRight.vue'
           :address="'No 26. St Ives street. Lagos island. Lagos.'"
           :rating="'5.0'"
           :reviews="'100 reviews'"
-          :image="'/src/assets/service-img-five.png'"
+          :image="'src/assets/service-img-five.png'"
           :className="'w-full'"
         />
       </div>
@@ -85,7 +85,7 @@ import IconArrowRight from './icons/IconArrowRight.vue'
         :address="'No 26. St Ives street. Lagos island. Lagos.'"
         :rating="'5.0'"
         :reviews="'100 reviews'"
-        :image="'/src/assets/service-img-six.png'"
+        :image="'src/assets/service-img-six.png'"
         :className="'w-full md:w-fit lg:w-full'"
       />
     </div>

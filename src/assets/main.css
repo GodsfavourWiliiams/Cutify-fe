@@ -132,7 +132,10 @@ body {
   transition:
     color 0.5s,
     background-color 0.5s;
-  font-family: 'Sofia Pro', Inter, -apple-system;
+  font-family:
+    'Sofia Pro',
+    Inter,
+    -apple-system;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
