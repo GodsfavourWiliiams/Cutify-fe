@@ -3,7 +3,14 @@ import FeatureItem from './FeatureItem.vue'
 import Button from './Button.vue'
 import AppContainer from './AppContainer.vue'
 
-const features = [
+
+type Feature = {
+  icon: 'booking' | 'cog' | 'user' | 'users' | 'bell' | 'creditCard';
+  title: string
+  description: string
+}
+
+const features: Feature[] = [
   {
     icon: 'booking',
     title: 'Easy booking',
