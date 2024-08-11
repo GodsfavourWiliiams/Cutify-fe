@@ -11,7 +11,7 @@ import serviceImgSix from '@/assets/images/service-img-six.png'
 </script>
 
 <template>
-  <AppContainer class="py-10 space-y-6 sm:py-28">
+  <AppContainer class="py-10 space-y-6 sm:py-28" id="services">
     <div class="flex flex-col gap-4">
       <div class="space-y-4 max-w-[737px] w-full">
         <h1 class="text-2xl leading-[32px] sm:text-[32px] font-medium text-left text-gray">

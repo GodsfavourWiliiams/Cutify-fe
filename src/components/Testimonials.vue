@@ -25,7 +25,7 @@ const testimonials = [
 </script>
 
 <template>
-  <div class="relative mt-10">
+  <div class="relative mt-10" id="testimonials">
     <div class="absolute right-0 hidden w-full lg:block -bottom-32">
       <img src="/src/assets/Rectangle-8.svg" class="w-full h-full max-h-[600px]" alt="" />
     </div>
