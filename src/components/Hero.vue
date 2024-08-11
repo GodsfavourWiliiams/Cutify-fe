@@ -5,7 +5,9 @@ import IconFacebook from './icons/IconFacebook.vue'
 import IconInstagram from './icons/IconInstagram.vue'
 import IconX from './icons/IconX.vue'
 import IconLinkedin from './icons/IconLinkedin.vue'
-import AppContainer from './AppContainer.vue'
+import AppContainer from './AppContainer.vue';
+import BlogBg from '@/assets/images/blog-bg.png';
+import ContactBg from '@/assets/images/blog-bg.png';
 
 const route = useRoute()
 
@@ -22,12 +24,12 @@ const pageContent = computed(() => {
     case '/blog':
       return {
         title: 'Blog',
-        bgImage: '/src/assets/blog-bg.png'
+        bgImage: BlogBg
       }
     case '/contact-us':
       return {
         title: 'Contact Us',
-        bgImage: '/src/assets/contact-bg.png'
+        bgImage: ContactBg
       }
     default:
       return {
@@ -57,14 +59,14 @@ const pageContent = computed(() => {
         </button>
       </div>
       <div class="w-full mt-10 lg:-mt-20" aria-hidden="true">
-        <img src="/src/assets/hero-bottom.png" alt="bottom-image" class="w-full" />
+        <img src="/src/assets/images/hero-bottom.png" alt="bottom-image" class="w-full" />
       </div>
     </AppContainer>
     <div class="absolute top-0 left-0" aria-hidden="true">
-      <img src="/src/assets/hero-bg-left.png" alt="top-left-background" />
+      <img src="/src/assets/images/hero-bg-left.png" alt="top-left-background" />
     </div>
     <div class="absolute top-0 right-0" aria-hidden="true">
-      <img src="/src/assets/hero-bg-right.png" alt="top-right-background" />
+      <img src="/src/assets/images/hero-bg-right.png" alt="top-right-background" />
     </div>
   </div>
   <div

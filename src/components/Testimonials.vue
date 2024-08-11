@@ -42,7 +42,7 @@ const testimonials = [
             experiences.
           </p>
           <div class="mt-0 md:mt-10 lg:place-self-end">
-            <img src="/src/assets/red-right-arrow.png" alt="" class="" />
+            <img src="/src/assets/images/red-right-arrow.png" alt="" class="" />
           </div>
         </div>
 

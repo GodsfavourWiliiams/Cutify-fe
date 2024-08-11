@@ -58,7 +58,7 @@ const socialIcons = [
       >
         <div class="flex flex-col col-span-4 gap-6 mb-10 lg:col-span-1 lg:mb-0">
           <RouterLink to="/" class="flex items-center flex-shrink-0">
-            <img class="w-auto h-[95px]" src="/src/assets/cutify-logo.png" alt="Cutify" />
+            <img class="w-auto h-[95px]" src="/src/assets/images/cutify-logo.png" alt="Cutify" />
           </RouterLink>
           <p class="whitespace-nowrap text-[13px]">...book beauty & health services</p>
         </div>
