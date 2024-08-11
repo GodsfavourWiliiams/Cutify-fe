@@ -4,7 +4,6 @@ import { computed } from 'vue'
 interface ButtonProps {
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link'
   size?: 'default' | 'sm' | 'lg' | 'icon'
-  asChild?: boolean
 }
 
 const props = withDefaults(defineProps<ButtonProps>(), {

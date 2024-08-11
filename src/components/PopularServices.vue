@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import FeatureItem from './FeatureItem.vue'
-import Button from './Button.vue'
+import Button from './Common/Button.vue'
 import AppContainer from './AppContainer.vue'
 
 type Feature = {

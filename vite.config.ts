@@ -10,10 +10,6 @@ export default defineConfig({
     port: 5001
   },
   resolve: {
-    // alias: {
-    //   '@': fileURLToPath(new URL('./src', import.meta.url))
-
-    // }
     alias: [
       { find: '@', replacement: fileURLToPath(new URL('./src', import.meta.url)) },
       { find: '@assets', replacement: fileURLToPath(new URL('./src/assets', import.meta.url)) },
