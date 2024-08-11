@@ -118,9 +118,9 @@ const scroll = (direction: 'next' | 'prev') => {
         </div>
       </AppContainer>
       <!-- Categories -->
-      <div class="relative flex mt-5">
-        <div class="shrink-0 snap-center sm:w-[5%] 3xl:w-[7%]  4xl-[1704px]:hidden h-48" />
-        <div ref="scrollContainer" class="relative flex gap-4 overflow-x-auto mx-auto 4xl:w-[1440px]  4xl:max-w-[90%]">
+      <div class="flex items-center mt-5">
+        <div class="shrink-0 snap-center hidden nano:block nano:w-[5%] 3xl:w-[7%] 4xl-[1704px]:hidden h-48" />
+        <div ref="scrollContainer" class="relative flex flex-col nano:flex-row gap-4 overflow-x-auto mx-auto 4xl:w-[1440px] 4xl:max-w-[90%]">
           <div
             v-for="(image, index) in images"
             :key="index"
