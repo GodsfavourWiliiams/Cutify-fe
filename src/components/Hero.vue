@@ -45,13 +45,31 @@ const pageContent = computed(() => {
   <div v-if="isHomePage" class="bg-[#F8FCFE] relative">
     <AppContainer class="px-4 py-24 sm:py-36">
       <div class="max-w-[868px] mx-auto text-center flex flex-col items-center gap-4 sm:gap-6">
-        <h1 class="text-3xl font-medium sm:text-5xl text-gray leading-[160%] sm:leading-normal">
-          <span class="font-bold text-primary-60">Discover and book</span> for a beauty and wellness
-          services near you.
+        <h1
+          class="text-3xl font-medium sm:text-5xl text-gray leading-[160%] sm:leading-normal relative"
+        >
+          <span class="relative font-bold text-primary-60">
+            Discover and book
+            <svg
+              class="absolute w-full -left-5 -bottom-5"
+              width="484"
+              height="28"
+              viewBox="0 0 484 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M483.504 2.85603C373.412 24.7841 259.361 35.6515 243.574 11.6288C227.788 -12.3939 109.733 30.5037 1.0591 11.6287"
+                stroke="#DDC6A6"
+                stroke-width="4.01509"
+              />
+            </svg>
+          </span>
+          for a beauty and wellness services near you.
         </h1>
         <p class="text-sm sm:text-base lg:text-lg text-gray-50 leading-[300%] sm:leading-normal">
           Embrace self-care and indulge in a world of beauty and wellness. Explore our curated
-          selection of services and effortlessly book appointments right in your neighborhood..
+          selection of services and effortlessly book appointments right in your neighborhood.
         </p>
         <Button size="lg"> Search and book an appointment </Button>
       </div>

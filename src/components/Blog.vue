@@ -93,7 +93,7 @@ function formatDateToRelative(dateString: string): string {
             :key="index"
             :title="blog.title.rendered"
             :date="formatDateToRelative(blog.date)"
-            :image="blog?.jetpack_featured_media_url ?? '/default-image.jpg'"
+            :image="blog?.jetpack_featured_media_url"
           />
         </template>
       </div>
