@@ -51,7 +51,7 @@ const pageContent = computed(() => {
           <span class="relative font-bold text-primary-60">
             Discover and book
             <svg
-              class="absolute w-full -left-5 -bottom-5"
+              class="absolute left-0 w-full sm:-left-5 -bottom-5"
               width="484"
               height="28"
               viewBox="0 0 484 28"
