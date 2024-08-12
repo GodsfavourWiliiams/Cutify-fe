@@ -50,10 +50,25 @@ const features: Feature[] = [
 </script>
 
 <template>
-  <AppContainer class="py-10 space-y-10">
+  <AppContainer class="py-10 space-y-10 overflow-hidden">
     <h2 class="text-2xl leading-[40px] sm:text-[32px] font-medium text-gray text-center">
       Why Cutify service booking app
-      <span class="text-primary-60">is perfect for you</span>
+      <br class="block lg:hidden">
+      <span class="relative font-normal text-primary-60"> is perfect for you   <svg
+        class="absolute bottom-0 -top-1 -right-64 w-fit"
+        width="482"
+        height="54"
+        viewBox="0 0 482 54"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M481.179 33.6683C374.544 -1.63034 262.32 -14.765 243.005 33.9003C223.69 82.5656 112.215 6.37981 0.951175 51.6712"
+          stroke="#DDC6A6"
+          stroke-width="4.01509"
+        />
+      </svg></span>
+    
     </h2>
     <div class="grid gap-8 md:grid-cols-2">
       <FeatureItem

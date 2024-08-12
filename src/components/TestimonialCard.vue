@@ -38,7 +38,7 @@ defineProps<{
     <div class="flex items-center gap-2 px-8">
       <img
         class="rounded-full w-[56px] h-[56px]"
-        src="https://pagedone.io/asset/uploads/1696229994.png"
+        src="/src/assets/images/testimonial-img.png"
         alt="avatar"
       />
       <div>
