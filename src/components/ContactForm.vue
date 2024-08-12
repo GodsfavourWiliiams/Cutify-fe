@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Button from './Common/Button.vue'
+import Input from './Common/Input.vue';
 </script>
 
 <template>
@@ -15,23 +16,14 @@ import Button from './Common/Button.vue'
     </div>
 
     <form class="space-y-5">
-      <input
-        type="text"
-        id="name"
+      <Input
         placeholder="Name"
-        class="w-full px-4 py-3 placeholder:text-[#909093] border rounded-md"
-        name="name"
       />
-      <input
+      <Input
         type="email"
-        id="email"
         placeholder="Email address"
-        class="w-full px-4 py-3 placeholder:text-[#909093] border rounded-md"
-        name="email"
       />
       <textarea
-        id="textarea"
-        name="textarea"
         cols="30"
         rows="5"
         placeholder="Write your message..."
