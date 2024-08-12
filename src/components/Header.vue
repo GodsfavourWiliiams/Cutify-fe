@@ -152,16 +152,16 @@ function scrollToSection(sectionId: string) {
         :aria-current="isActiveLink(item.href) ? 'page' : undefined"
         >{{ item.name }}</RouterLink
       >
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-2 gap-4 pt-2">
         <RouterLink
           to="/auth/sign-up"
-          class="relative px-4 py-3 bg-white border rounded-lg text-primary-60 border-primary-60"
+          class="px-4 py-3 text-xs bg-white border rounded-lg text-primary-60 border-primary-60"
         >
           Create account
         </RouterLink>
         <RouterLink
           to="/auth/sign-in"
-          class="relative w-full p-3 text-center text-white rounded-lg bg-primary-60"
+          class="w-full p-3 text-xs text-center text-white rounded-lg bg-primary-60"
         >
           Login
         </RouterLink>
